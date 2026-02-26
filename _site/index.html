@@ -67,16 +67,16 @@
                     <a href="#page-top"></a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#events">Evento</a>
+                    <a class="page-scroll" href="#home">Home</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#venue">Luogo</a>
+                    <a class="page-scroll" href="#events">Programma</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#travel">Come arrivare</a>
-                <li>
-                    <a class="page-scroll" href="#stay">Dove stare</a>
+                    <a class="page-scroll" href="#travel">I luoghi</a>
                 </li>
+                <li>
+                    <a class="page-scroll" href="#stay">RSVP</a>
                 </li>
                 <li>
                     <a class="page-scroll hidden-xs hidden-sm" href="#portfolio">Cose da fare</a>
@@ -102,19 +102,94 @@
     <div class="container">
         <div class="intro-text">
             <div class="intro-heading">Ci sposiamo!</div>
-            <div class="intro-lead-in">18 Luglio 2026</div>
+            <div class="intro-lead-in">18 Luglio 2026 <br> ore 16:00</div>
             <div class="intro-lead-in">Chiesa di San Pier di Canne</div>
             <a href="#events" class="page-scroll btn btn-xl">Scopri di più</a>
         </div>
     </div>
 </header>
 
+    <!DOCTYPE html>
+<html>
+    <style>
+        .rowstory {
+          display: flex;
+          flex-wrap: wrap;
+          padding: 0 4px;
+        }
+
+        /* Create four equal columns that sits next to each other */
+        .columnstory {
+          flex: 25%;
+          max-width: 25%;
+          padding: 0 4px;
+        }
+
+        .columnstory img {
+          margin-top: 8px;
+          vertical-align: middle;
+          width: 100%;
+        }
+
+        /* Responsive layout - makes a two column-layout instead of four columns */
+        @media screen and (max-width: 800px) {
+          .columnstory {
+            flex: 50%;
+            max-width: 50%;
+          }
+        }
+
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+          .columnstory {
+            flex: 100%;
+            max-width: 100%;
+          }
+        }
+    </style>
+
+    <!-- Our Story Section -->
+    <section id="home" class="bg-light-violet">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Ciao amici, amiche e parenti! <i class="fas fa-heart"></i></h2>
+                </div>
+            </div>
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <p class="largepad text-muted">
+                    Ebbene sì, ci sposiamo! <br> 
+                    Siamo molto felici di festeggiare con tutti voi, per questo speriamo che possiate esserci il 18 Luglio 2026. <br> In questo sito troverete tutte le informazioni sul nostro matrimonio. <br><br> Non dimenticatevi di confermare la vostra presenza!
+                    <br>Per qualsiasi cosa, sentiamoci!
+                    <br>Vi vogliamo bene.
+                    <br>Un abbraccio,
+                    <br>Alessia & Samuel
+                </p>
+            </div>
+        </div>
+        <div class="rowstory">
+            <div class="columnstory">
+                <img src="/wedding/img/home/img1.jpeg">
+            </div>
+            <div class="columnstory">
+                <img src="/wedding/img/home/img2.jpg">
+            </div>
+            <div class="columnstory">
+                <img src="/wedding/img/home/img3.jpg">
+            </div>
+            <div class="columnstory">
+                <img src="/wedding/img/home/img4.jpg">
+            </div>
+        </div>
+    </section>
+</html>
     <!-- Events Section -->
 <section id="events">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Eventi</h2>
+                <h1><br><br></h1>
+                <h2 class="section-heading">18 Luglio 2026 - <i>Il programma</i></h2> 
             </div>
         </div>
         <div class="row">
@@ -126,9 +201,9 @@
                         </div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>Cérémonie</h4>
-                                <h4 class="subheading">Giorno e ora</h4>
-                                <h6>Lieu</h6>
+                                <h4>Cerimonia</h4>
+                                <h4 class="subheading">Ore 16:00</h4>
+                                <h6>Chiesa di San Pier di Canne</h6>
                             </div>
                             <div class="timeline-body">
                                 <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere.</p>
@@ -137,31 +212,76 @@
                     </li>
                     <li class="timeline-inverted">
                         <div class="timeline-image">
-                            <img class="img-circle img-responsive" src="../img/events/2.png" alt="">
+                            <img class="img-circle img-responsive" src="/wedding/img/events/2.png" alt="">
                         </div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>Réception</h4>
-                                <h4 class="subheading">Heure et date</h4>
-                                <h6>Lieu</h6>
+                                <h4>Taglio dell'anguria</h4>
+                                <h4 class="subheading">Ore 17:00</h4>
+                                <h6>Piazza di San Pier di Canne</h6>
                             </div>
                             <div class="timeline-body">
-                                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere.</p>
+                                <p class="text-muted">Un momento conviviale in piazza aperto a tutti!</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image">
+                            <img class="img-circle img-responsive" src="/wedding/img/events/3.png" alt="">
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Aperitivo</h4>
+                                <h4 class="subheading">Ore 18:00</h4>
+                                <h6>La Novellina</h6>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">Un momento conviviale a La Novellina (Cicagna).</p>
                             </div>
                         </div>
                     </li>
                     <li>
                         <div class="timeline-image">
-                            <img class="img-circle img-responsive" src="../img/events/3.png" alt="">
+                            <img class="img-circle img-responsive" src="/wedding/img/events/4.png" alt="">
                         </div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>Brunch</h4>
-                                <h4 class="subheading">Heure et date</h4>
-                                <h6>Lieu</h6>
+                                <h4>Cena</h4>
+                                <h4 class="subheading">Ore 19:00</h4>
+                                <h6>La Novellina</h6>
                             </div>
                             <div class="timeline-body">
-                                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere.</p>
+                                <p class="text-muted">Un menù speciale preparato per celebrare il nostro giorno.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image">
+                            <img class="img-circle img-responsive" src="/wedding/img/events/5.png" alt="">
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Taglio della torta</h4>
+                                <h4 class="subheading">Ore 22:00</h4>
+                                <h6>La Novellina</h6>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">Il momento più dolce della serata</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image">
+                            <img class="img-circle img-responsive" src="/wedding/img/events/6.png" alt="">
+                        </div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Festa</h4>
+                                <h4 class="subheading">Ore 23:00</h4>
+                                <h6>La Novellina</h6>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="text-muted">Musica, balli e divertimento fino a tardi accompagnati da Le bimbe di Erode</p>
                             </div>
                         </div>
                     </li>
@@ -205,33 +325,32 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Come arrivare</h2>
+                <h2 class="section-heading">I luoghi</h2>
             </div>
         </div>
         <div class="row text-center">
-            <div class="col-md-4">
-                <span class="fa-stack fa-4x">
-                    <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                    <i class="fa fa-plane fa-stack-1x fa-inverse"></i>
-                </span>
-                <h4 class="service-heading">Aereo</h4>
-                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent hendrerit ultricies pharetra. Donec maximus at neque a vehicula.</p>
+            <div class="col-md-2">
+                <br><br><br><br><br><br><br><br>
             </div>
             <div class="col-md-4">
-                <span class="fa-stack fa-4x">
-                    <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                    <i class="fa fa-car fa-stack-1x fa-inverse"></i>
+                <span class="fa-stack fa-4x"> 
+                    <i class="fa fa-circle fa-stack-2x text-primary"></i> 
+                    <img src="/wedding/img/events/7.png" class="img-circle fa-stack-1x"> 
                 </span>
-                <h4 class="service-heading">Macchina</h4>
+                <h4 class="service-heading">Chiesa di San Pier di Canne</h4>
                 <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent hendrerit ultricies pharetra. Donec maximus at neque a vehicula.</p>
+                <iframe class="fa-stack fa-10x" style="border: 5px solid rgba(200, 162, 200, 0.5);;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2015.537203237325!2d9.319306954166446!3d44.32832128099287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d4a3e4cb6b0a1f%3A0x94bb2d550637e8a5!2sParrocchia%20San%20Pietro%20in%20Sampierdicanne!5e0!3m2!1sit!2sit!4v1772144708748!5m2!1sit!2sit" width="450" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                
             </div>
+            
             <div class="col-md-4">
-                <span class="fa-stack fa-4x">
-                    <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                    <i class="fa fa-train fa-stack-1x fa-inverse"></i>
+                <span class="fa-stack fa-4x"> 
+                    <i class="fa fa-circle fa-stack-2x text-primary"></i> 
+                    <img src="/wedding/img/events/8.png" class="img-circle fa-stack-1x"> 
                 </span>
-                <h4 class="service-heading">Treno</h4>
+                <h4 class="service-heading">La Novellina</h4>
                 <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent hendrerit ultricies pharetra. Donec maximus at neque a vehicula.</p>
+                <iframe class="fa-stack fa-10x" style="border: 5px solid rgba(200, 162, 200, 0.5);;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2850.197535708997!2d9.22548428614802!3d44.40859209649868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d4a7299e8d3fa7%3A0x48869191e4d3adaf!2sAgriturismo%20La%20Novellina!5e0!3m2!1sit!2sit!4v1772144844488!5m2!1sit!2sit" width="450" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </div>
@@ -240,194 +359,43 @@
 <section id="stay" class="bg-light-gray">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Alloggi</h2>
-                <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque feugiat sapien sem, id dignissim est pellentesque eu. Etiam eget ligula fermentum, convallis odio vel, sodales metus. Proin odio arcu, tincidunt.</h3>
+            <div class="rsvp-container" id="rsvp-it">
+                <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">RSVP</h2>
+                    <h3 class="section-subheading text-muted" style="color:white;"><b>Segna la tua presenza qui entro il 31 Maggio</h3>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <ul style="list-style-type:none;">
-                    <li>
-                        Nom
-                        <ul class="fa-ul">
-                            <li>
-                                <span class="fa-li"><i class="fa fa-home"></i></span><span class="text-muted plist">Description</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-map-marker"></i></span><span class="text-muted plist">Adresse</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-phone"></i></span><span class="text-muted plist">Numéro de téléphone</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fas fa-external-link-alt"></i></span><span class="plist"><a href="https://www.airbnb.com">https://www.airbnb.com/</a></span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-car"></i></span><span class="text-muted plist">Distance du lieu de mariage</span>
-                            </li>
-                            <li><br></li>
-                        </ul>
-                    </li>
+                <form id="rsvpForm">
+                    <label>Nome e Cognome</label>
+                    <input type="text" name="nome" required>
+                
+                    <label>Parteciperai?</label>
+                    <select name="presenza" required>
+                        <option value="Si">Sì, sarò presente</option>
+                        <option value="No">No, non posso venire</option>
+                    </select>
+                
+                    <label>Numero di accompagnatori</label>
+                    <input type="number" name="accompagnatori" min="0" value="0">
+                
+                    
+                    
+                    <label>Come verrai?</label>
+                    <select name="macchina" required>
+                        <option value="macchina">Sono in macchina</option>
+                        <option value="passaggio">Ho bisogno di un passaggio</option>
+                    </select>
+                    <label>Se vieni in macchina, hai dei posti liberi?</label>
+                    <input type="number" name="posti liberi" min="0" value="0">
+                    <label>Hai allergie, intolleranze o esigenze particolari?</label>
+                    <textarea name="allergie" rows="4"></textarea>
+                    
+                    <button style="background-color: white; color:black; display: flex; justify-self: center" type="submit">Invia RSVP</button>
+                </form>
 
-                    <li>
-                        Nom
-                        <ul class="fa-ul">
-                            <li>
-                                <span class="fa-li"><i class="fa fa-home"></i></span><span class="text-muted plist">Description</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-map-marker"></i></span><span class="text-muted plist">Adresse</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-phone"></i></span><span class="text-muted plist">Numéro de téléphone</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fas fa-external-link-alt"></i></span><span class="plist"><a href="https://www.airbnb.com">https://www.airbnb.com/</a></span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-car"></i></span><span class="text-muted plist">Distance du lieu de mariage</span>
-                            </li>
-                            <li><br></li>
-                        </ul>
-                    </li>
+                <div id="rsvpMessage" style="margin-top:20px; font-weight:bold;"></div>
 
-                    <li>
-                        Nom
-                        <ul class="fa-ul">
-                            <li>
-                                <span class="fa-li"><i class="fa fa-home"></i></span><span class="text-muted plist">Description</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-map-marker"></i></span><span class="text-muted plist">Adresse</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-phone"></i></span><span class="text-muted plist">Numéro de téléphone</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fas fa-external-link-alt"></i></span><span class="plist"><a href="https://www.airbnb.com">https://www.airbnb.com/</a></span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-car"></i></span><span class="text-muted plist">Distance du lieu de mariage</span>
-                            </li>
-                            <li><br></li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        Nom
-                        <ul class="fa-ul">
-                            <li>
-                                <span class="fa-li"><i class="fa fa-home"></i></span><span class="text-muted plist">Description</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-map-marker"></i></span><span class="text-muted plist">Adresse</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-phone"></i></span><span class="text-muted plist">Numéro de téléphone</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fas fa-external-link-alt"></i></span><span class="plist"><a href="https://www.airbnb.com">https://www.airbnb.com/</a></span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-car"></i></span><span class="text-muted plist">Distance du lieu de mariage</span>
-                            </li>
-                            <li><br></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col-md-6">
-                <ul style="list-style-type:none;">
-                    <li>
-                        Nom
-                        <ul class="fa-ul">
-                            <li>
-                                <span class="fa-li"><i class="fa fa-home"></i></span><span class="text-muted plist">Description</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-map-marker"></i></span><span class="text-muted plist">Adresse</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-phone"></i></span><span class="text-muted plist">Numéro de téléphone</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fas fa-external-link-alt"></i></span><span class="plist"><a href="https://www.airbnb.com">https://www.airbnb.com/</a></span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-car"></i></span><span class="text-muted plist">Distance du lieu de mariage</span>
-                            </li>
-                            <li><br></li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        Nom
-                        <ul class="fa-ul">
-                            <li>
-                                <span class="fa-li"><i class="fa fa-home"></i></span><span class="text-muted plist">Description</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-map-marker"></i></span><span class="text-muted plist">Adresse</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-phone"></i></span><span class="text-muted plist">Numéro de téléphone</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fas fa-external-link-alt"></i></span><span class="plist"><a href="https://www.airbnb.com">https://www.airbnb.com/</a></span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-car"></i></span><span class="text-muted plist">Distance du lieu de mariage</span>
-                            </li>
-                            <li><br></li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        Nom
-                        <ul class="fa-ul">
-                            <li>
-                                <span class="fa-li"><i class="fa fa-home"></i></span><span class="text-muted plist">Description</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-map-marker"></i></span><span class="text-muted plist">Adresse</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-phone"></i></span><span class="text-muted plist">Numéro de téléphone</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fas fa-external-link-alt"></i></span><span class="plist"><a href="https://www.airbnb.com">https://www.airbnb.com/</a></span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-car"></i></span><span class="text-muted plist">Distance du lieu de mariage</span>
-                            </li>
-                            <li><br></li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        Nom
-                        <ul class="fa-ul">
-                            <li>
-                                <span class="fa-li"><i class="fa fa-home"></i></span><span class="text-muted plist">Description</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-map-marker"></i></span><span class="text-muted plist">Adresse</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-phone"></i></span><span class="text-muted plist">Numéro de téléphone</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fas fa-external-link-alt"></i></span><span class="plist"><a href="https://www.airbnb.com">https://www.airbnb.com/</a></span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-car"></i></span><span class="text-muted plist">Distance du lieu de mariage</span>
-                            </li>
-                            <li><br></li>
-                        </ul>
-                    </li>
-                </ul>
             </div>
         </div>
     </div>
@@ -450,7 +418,7 @@
                             <i class="fa fa-plus fa-3x"></i>
                         </div>
                     </div>
-                    <img src="../img/portfolio/1.jpg" class="img-responsive img-centered" alt="">
+                    <img src="/wedding/img/portfolio/1.jpg" class="img-responsive img-centered" alt="">
                 </a>
                 <div class="portfolio-caption">
                     <h4>Activité</h4>
@@ -465,7 +433,7 @@
                             <i class="fa fa-plus fa-3x"></i>
                         </div>
                     </div>
-                    <img src="../img/portfolio/2.jpg" class="img-responsive img-centered" alt="">
+                    <img src="/wedding/img/portfolio/2.jpg" class="img-responsive img-centered" alt="">
                 </a>
                 <div class="portfolio-caption">
                     <h4>Activité</h4>
@@ -480,7 +448,7 @@
                             <i class="fa fa-plus fa-3x"></i>
                         </div>
                     </div>
-                    <img src="../img/portfolio/3.jpg" class="img-responsive img-centered" alt="">
+                    <img src="/wedding/img/portfolio/3.jpg" class="img-responsive img-centered" alt="">
                 </a>
                 <div class="portfolio-caption">
                     <h4>Activité</h4>
@@ -495,7 +463,7 @@
                             <i class="fa fa-plus fa-3x"></i>
                         </div>
                     </div>
-                    <img src="../img/portfolio/4.jpg" class="img-responsive img-centered" alt="">
+                    <img src="/wedding/img/portfolio/4.jpg" class="img-responsive img-centered" alt="">
                 </a>
                 <div class="portfolio-caption">
                     <h4>Activité</h4>
@@ -510,7 +478,7 @@
                             <i class="fa fa-plus fa-3x"></i>
                         </div>
                     </div>
-                    <img src="../img/portfolio/5.jpg" class="img-responsive img-centered" alt="">
+                    <img src="/wedding/img/portfolio/5.jpg" class="img-responsive img-centered" alt="">
                 </a>
                 <div class="portfolio-caption">
                     <h4>Activité</h4>
@@ -525,7 +493,7 @@
                             <i class="fa fa-plus fa-3x"></i>
                         </div>
                     </div>
-                    <img src="../img/portfolio/6.jpg" class="img-responsive img-centered" alt="">
+                    <img src="/wedding/img/portfolio/6.jpg" class="img-responsive img-centered" alt="">
                 </a>
                 <div class="portfolio-caption">
                     <h4>Activité</h4>
@@ -590,28 +558,28 @@
         </div>
         <div class="rowstory">
             <div class="columnstory">
-                <img src="../img/story/col1-row1.jpg">
-                <img src="../img/story/col1-row2.jpg">
-                <img src="../img/story/col1-row3.jpg">
-                <img src="../img/story/col1-row4.jpg">
+                <img src="/wedding/img/story/col1-row1.jpg">
+                <img src="/wedding/img/story/col1-row2.jpg">
+                <img src="/wedding/img/story/col1-row3.jpg">
+                <img src="/wedding/img/story/col1-row4.jpg">
             </div>
             <div class="columnstory">
-                <img src="../img/story/col2-row1.jpg">
-                <img src="../img/story/col2-row2.jpg">
-                <img src="../img/story/col2-row3.jpg">
-                <img src="../img/story/col2-row4.jpg">
+                <img src="/wedding/img/story/col2-row1.jpg">
+                <img src="/wedding/img/story/col2-row2.jpg">
+                <img src="/wedding/img/story/col2-row3.jpg">
+                <img src="/wedding/img/story/col2-row4.jpg">
             </div>
             <div class="columnstory">
-                <img src="../img/story/col3-row1.jpg">
-                <img src="../img/story/col3-row2.jpg">
-                <img src="../img/story/col3-row3.jpg">
-                <img src="../img/story/col3-row4.jpg">
+                <img src="/wedding/img/story/col3-row1.jpg">
+                <img src="/wedding/img/story/col3-row2.jpg">
+                <img src="/wedding/img/story/col3-row3.jpg">
+                <img src="/wedding/img/story/col3-row4.jpg">
             </div>
             <div class="columnstory">
-                <img src="../img/story/col4-row1.jpg">
-                <img src="../img/story/col4-row2.jpg">
-                <img src="../img/story/col4-row3.jpg">
-                <img src="../img/story/col4-row4.jpg">
+                <img src="/wedding/img/story/col4-row1.jpg">
+                <img src="/wedding/img/story/col4-row2.jpg">
+                <img src="/wedding/img/story/col4-row3.jpg">
+                <img src="/wedding/img/story/col4-row4.jpg">
             </div>
         </div>
     </section>
@@ -628,7 +596,7 @@
             
             <div class="col-sm-4">
                 <div class="team-member">
-                    <img src="../img/bridal/1.jpg" class="img-responsive img-circle" alt="">
+                    <img src="/wedding/img/bridal/1.jpg" class="img-responsive img-circle" alt="">
                     <h4>Prénom</h4>
                     <p class="text-muted team-position">Rôle</p>
                 </div>
@@ -636,7 +604,7 @@
             
             <div class="col-sm-4">
                 <div class="team-member">
-                    <img src="../img/bridal/2.jpg" class="img-responsive img-circle" alt="">
+                    <img src="/wedding/img/bridal/2.jpg" class="img-responsive img-circle" alt="">
                     <h4>Prénom</h4>
                     <p class="text-muted team-position">Rôle</p>
                 </div>
@@ -644,7 +612,7 @@
             
             <div class="col-sm-4">
                 <div class="team-member">
-                    <img src="../img/bridal/3.jpg" class="img-responsive img-circle" alt="">
+                    <img src="/wedding/img/bridal/3.jpg" class="img-responsive img-circle" alt="">
                     <h4>Prénom</h4>
                     <p class="text-muted team-position">Rôle</p>
                 </div>
@@ -652,7 +620,7 @@
             
             <div class="col-sm-4">
                 <div class="team-member">
-                    <img src="../img/bridal/4.jpg" class="img-responsive img-circle" alt="">
+                    <img src="/wedding/img/bridal/4.jpg" class="img-responsive img-circle" alt="">
                     <h4>Prénom</h4>
                     <p class="text-muted team-position">Rôle</p>
                 </div>
@@ -660,7 +628,7 @@
             
             <div class="col-sm-4">
                 <div class="team-member">
-                    <img src="../img/bridal/5.jpg" class="img-responsive img-circle" alt="">
+                    <img src="/wedding/img/bridal/5.jpg" class="img-responsive img-circle" alt="">
                     <h4>Prénom</h4>
                     <p class="text-muted team-position">Rôle</p>
                 </div>
@@ -668,7 +636,7 @@
             
             <div class="col-sm-4">
                 <div class="team-member">
-                    <img src="../img/bridal/6.jpg" class="img-responsive img-circle" alt="">
+                    <img src="/wedding/img/bridal/6.jpg" class="img-responsive img-circle" alt="">
                     <h4>Prénom</h4>
                     <p class="text-muted team-position">Rôle</p>
                 </div>
@@ -787,7 +755,7 @@
                         <div class="modal-body">
                             <h2>Activité</h2>
                             <hr class="star-primary">
-                            <img src="../img/portfolio/1.jpg" class="img-responsive img-centered" alt="">
+                            <img src="/wedding/img/portfolio/1.jpg" class="img-responsive img-centered" alt="">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tristique rutrum mauris nec rutrum. Nam sem ex, bibendum vitae velit eu, tempor sagittis nunc. Donec nunc erat, tempor ac finibus vel, molestie eget augue. Curabitur eleifend venenatis mi, sagittis faucibus ex pellentesque in. Etiam efficitur, augue sed faucibus laoreet, ligula diam euismod ipsum, facilisis pharetra sapien tortor eget nibh. Nulla vel purus suscipit, rutrum diam.</p>
                             <ul class="list-inline item-details">
                                 <li><i class="fa fa-car"></i> Come arrivare:
@@ -816,7 +784,7 @@
                         <div class="modal-body">
                             <h2>Activité</h2>
                             <hr class="star-primary">
-                            <img src="../img/portfolio/2.jpg" class="img-responsive img-centered" alt="">
+                            <img src="/wedding/img/portfolio/2.jpg" class="img-responsive img-centered" alt="">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tristique rutrum mauris nec rutrum. Nam sem ex, bibendum vitae velit eu, tempor sagittis nunc. Donec nunc erat, tempor ac finibus vel, molestie eget augue. Curabitur eleifend venenatis mi, sagittis faucibus ex pellentesque in. Etiam efficitur, augue sed faucibus laoreet, ligula diam euismod ipsum, facilisis pharetra sapien tortor eget nibh. Nulla vel purus suscipit, rutrum diam.</p>
                             <ul class="list-inline item-details">
                                 <li><i class="fa fa-car"></i> Come arrivare:
@@ -845,7 +813,7 @@
                         <div class="modal-body">
                             <h2>Activité</h2>
                             <hr class="star-primary">
-                            <img src="../img/portfolio/3.jpg" class="img-responsive img-centered" alt="">
+                            <img src="/wedding/img/portfolio/3.jpg" class="img-responsive img-centered" alt="">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tristique rutrum mauris nec rutrum. Nam sem ex, bibendum vitae velit eu, tempor sagittis nunc. Donec nunc erat, tempor ac finibus vel, molestie eget augue. Curabitur eleifend venenatis mi, sagittis faucibus ex pellentesque in. Etiam efficitur, augue sed faucibus laoreet, ligula diam euismod ipsum, facilisis pharetra sapien tortor eget nibh. Nulla vel purus suscipit, rutrum diam.</p>
                             <ul class="list-inline item-details">
                                 <li><i class="fa fa-car"></i> Come arrivare:
@@ -874,7 +842,7 @@
                         <div class="modal-body">
                             <h2>Activité</h2>
                             <hr class="star-primary">
-                            <img src="../img/portfolio/4.jpg" class="img-responsive img-centered" alt="">
+                            <img src="/wedding/img/portfolio/4.jpg" class="img-responsive img-centered" alt="">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tristique rutrum mauris nec rutrum. Nam sem ex, bibendum vitae velit eu, tempor sagittis nunc. Donec nunc erat, tempor ac finibus vel, molestie eget augue. Curabitur eleifend venenatis mi, sagittis faucibus ex pellentesque in. Etiam efficitur, augue sed faucibus laoreet, ligula diam euismod ipsum, facilisis pharetra sapien tortor eget nibh. Nulla vel purus suscipit, rutrum diam.</p>
                             <ul class="list-inline item-details">
                                 <li><i class="fa fa-car"></i> Come arrivare:
@@ -903,7 +871,7 @@
                         <div class="modal-body">
                             <h2>Activité</h2>
                             <hr class="star-primary">
-                            <img src="../img/portfolio/5.jpg" class="img-responsive img-centered" alt="">
+                            <img src="/wedding/img/portfolio/5.jpg" class="img-responsive img-centered" alt="">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tristique rutrum mauris nec rutrum. Nam sem ex, bibendum vitae velit eu, tempor sagittis nunc. Donec nunc erat, tempor ac finibus vel, molestie eget augue. Curabitur eleifend venenatis mi, sagittis faucibus ex pellentesque in. Etiam efficitur, augue sed faucibus laoreet, ligula diam euismod ipsum, facilisis pharetra sapien tortor eget nibh. Nulla vel purus suscipit, rutrum diam.</p>
                             <ul class="list-inline item-details">
                                 <li><i class="fa fa-car"></i> Come arrivare:
@@ -932,7 +900,7 @@
                         <div class="modal-body">
                             <h2>Activité</h2>
                             <hr class="star-primary">
-                            <img src="../img/portfolio/6.jpg" class="img-responsive img-centered" alt="">
+                            <img src="/wedding/img/portfolio/6.jpg" class="img-responsive img-centered" alt="">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tristique rutrum mauris nec rutrum. Nam sem ex, bibendum vitae velit eu, tempor sagittis nunc. Donec nunc erat, tempor ac finibus vel, molestie eget augue. Curabitur eleifend venenatis mi, sagittis faucibus ex pellentesque in. Etiam efficitur, augue sed faucibus laoreet, ligula diam euismod ipsum, facilisis pharetra sapien tortor eget nibh. Nulla vel purus suscipit, rutrum diam.</p>
                             <ul class="list-inline item-details">
                                 <li><i class="fa fa-car"></i> Come arrivare:
