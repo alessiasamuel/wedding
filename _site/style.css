@@ -88,6 +88,10 @@ h6 {
     background-color: #f7f7f7;
 }
 
+.bg-light-violet {
+    background-color: rgba(200, 162, 200, 0.5);;
+}
+
 .bg-darkest-gray {
     background-color: #222;
 }
@@ -999,4 +1003,54 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: #f8d56f;
+}
+
+/* RSVP Page */
+.rsvp-container {
+    margin-top: 120px;
+    background: rgba(200, 162, 200, 0.5);;
+    padding: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.rsvp-container h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: var(--lilla);
+}
+
+.rsvp-container label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.rsvp-container input,
+.rsvp-container select,
+.rsvp-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.rsvp-container button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: var(--lilla);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.rsvp-container button:hover {
+    background: var(--arancione);
 }
