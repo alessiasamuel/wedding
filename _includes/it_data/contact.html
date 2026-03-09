@@ -25,35 +25,60 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Scrivici</h2>
-                <h3 class="section-subheading text-muted">Oppure mandaci una mail <a href="mailto:giordanalessia95@gmail.com">giordanalessia95@gmail.com</a>.</h3>
+                <h2 class="section-heading">rsvp</h2>
+                <h3 class="section-subheading text-muted" style="color:white;"><b>Segna la tua presenza qui entro il 31 Maggio</h3>
             </div>
         </div>
-        <div class="row">
-            <div class="col-lg-12">
+        <div class="row" >
+            <div class="col-lg-12" >
                 <!-- Create your own form using FormCarry: https://formcarry.com/ -->
                 <form class="ajaxForm" action="YOUR_FORM_CARRY_ENDPOINT" method="POST">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="control-group form-group">
-                                <input type="text" class="form-control" placeholder="Votre Nom" id="name" name="name" required data-validation-required-message="Renseignez votre prénom et votre nom.">
+                                <input type="text" class="form-control" placeholder="Nome e Cognome" id="name" name="name" required data-validation-required-message="Per favore, inserisci il tuo nome">
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group form-group">
-                                <input type="email" class="form-control" placeholder="Votre Email" id="email" name="email" required data-validation-required-message="Renseignez votre adresse email.">
+                                <label class="form-control-label" style="background-color: rgba(255,255,255,0.5); color: gray; height: 40px; width: 100%; display: flex; align-items: center;" >Parteciperai?</label>
+                                <select type="partecipazione" class="form-control" placeholder="parteciperai?" id="partecipazione" name="partecipazione" required data-validation-required-message="Per favore, indicaci se parteciperai">
+                                    <option value="Si">Sì, sarò presente</option>
+                                    <option value="No">No, non posso venire</option>
+                                </select>
                                 <p class="help-block text-danger"></p>
                             </div>
+                            <div class="control-group form-group">
+                                <label class="form-control-label" style="background-color: rgba(255,255,255,0.5); color: gray; height: 40px; width: 100%; display: flex; align-items: center;" >Numero di accompagnatori</label>
+                                <input type="number" class="form-control" min="0" value="0" placeholder="numero di accompagnatori" id="accompagnatori" name="accompagnatori" required data-validation-required-message="Per favore, inserisci quanti sarete">
+                                <p class="help-block text-danger"></p>
+                            </div>   
+                                                  
                         </div>
                         <div class="col-md-6">
                             <div class="control-group form-group">
-                                <textarea class="form-control" placeholder="Votre Message" id="message" name="message" required data-validation-required-message="Quel est votre message?"></textarea>
+                                <label class="form-control-label" style="background-color: rgba(255,255,255,0.5); color: gray; height: 40px; width: 100%; display: flex; align-items: center;" >Come verrai?</label>
+                                <select type="partecipazione" class="form-control" placeholder="parteciperai?" id="partecipazione" name="partecipazione" required data-validation-required-message="Per favore, indicaci se parteciperai">
+                                    <option value="Si">Verrò in macchina/scooter</option>
+                                    <option value="No">Ho bisogno di un passaggio</option>
+                                </select>
                                 <p class="help-block text-danger"></p>
                             </div>
+                            <div class="control-group form-group">
+                                <label class="form-control-label" style="background-color: rgba(255,255,255,0.5); color: gray; height: 40px; width: 100%; display: flex; align-items: center;" >Se avrai un mezzo, quanti posti liberi hai?</label>
+                                <input type="number" class="form-control" min="0" value="0" placeholder="numero di accompagnatori" id="accompagnatori" name="accompagnatori" required data-validation-required-message="Per favore, inserisci quanti sarete">
+                                <p class="help-block text-danger"></p>
+                            </div> 
+                           
                         </div>
                         <div class="clearfix"></div>
+                         
                         <div class="col-lg-12 text-center">
+                            <div class="control-group form-group">
+                                <textarea class="form-control" placeholder="Inserisci allergie o richieste specifiche" id="message" name="message" required data-validation-required-message="Hai allergie o richieste specifiche?"></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>  
                             <div id="success"></div>
-                            <button type="submit" class="btn btn-xl">Invia il messaggio</button>
+                            <button type="submit" class="btn btn-xl">Invia</button>
                         </div>
                     </div>
                 </form>

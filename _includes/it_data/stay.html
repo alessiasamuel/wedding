@@ -1,14 +1,14 @@
-<!-- Where To Stay Section -->
+<!-- RSVP Section -->
 <section id="stay" class="bg-light-gray">
     <div class="container">
         <div class="row">
-            <div class="rsvp-container" id="rsvp-it">
+            <div class="rsvp-container">
                 <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">RSVP</h2>
-                    <h3 class="section-subheading text-muted" style="color:white;"><b>Segna la tua presenza qui entro il 31 Maggio</h3>
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading">RSVP</h2>
+                        <h3 class="section-subheading text-muted" style="color:white;"><b>Segna la tua presenza qui entro il 31 Maggio</h3>
+                    </div>
                 </div>
-            </div>
                 <form id="rsvpForm">
                     <label>Nome e Cognome</label>
                     <input type="text" name="nome" required>
@@ -21,20 +21,24 @@
                 
                     <label>Numero di accompagnatori</label>
                     <input type="number" name="accompagnatori" min="0" value="0">
-                
-                    
-                    
+ 
                     <label>Come verrai?</label>
-                    <select name="macchina" required>
+                    <select name="mezzi" required>
                         <option value="macchina">Sono in macchina</option>
                         <option value="passaggio">Ho bisogno di un passaggio</option>
                     </select>
                     <label>Se vieni in macchina, hai dei posti liberi?</label>
-                    <input type="number" name="posti liberi" min="0" value="0">
+                    <input type="number" name="posti_liberi" min="0" value="0">
                     <label>Hai allergie, intolleranze o esigenze particolari?</label>
-                    <textarea name="allergie" rows="4"></textarea>
+                    <textarea name="note" rows="4"></textarea>
                     
-                    <button style="background-color: white; color:black; display: flex; justify-self: center" type="submit">Invia RSVP</button>
+                    <button id="btnCarica" class="my-button" style="background-color: white; color:black; display: flex; justify-self: center" type="submit">
+                        <span class="btn-text">Invia RSVP</span>
+                        <span class="spinner" style="display:none;"></span>
+                    
+                    </button>
+                        
+                    
                 </form>
 
                 <div id="rsvpMessage" style="margin-top:20px; font-weight:bold;"></div>
@@ -43,3 +47,54 @@
         </div>
     </div>
 </section>
+
+<script>
+    scriptURL = 'https://script.google.com/macros/s/AKfycbwgMb-_S2UiSajBAF2M6IbfW7C1VMOMGjGH2AoOuJ8r7PBqaqidj7OEIl2T4jokLfEV/exec';
+    const form = document.getElementById('rsvpForm');
+
+    form.addEventListener('submit', e => {
+        const btn = document.getElementById('btnCarica');
+        const textSpan = btn.querySelector('.btn-text');
+        const spinner = btn.querySelector('.spinner');
+
+        // Cambia stato: aggiunge classe loading, disabilita, mostra spinner
+        btn.classList.add('loading');
+        btn.disabled = true;
+        textSpan.innerText = 'Attendi...';
+        spinner.style.display = 'inline-block';
+        
+        e.preventDefault();
+        const data = {
+        nome: form.nome.value,
+        presenza: form.presenza.value,
+        accompagnatori: form.accompagnatori.value,
+        mezzi: form.mezzi.value,
+        posti_liberi: form.posti_liberi.value,
+        note: form.note.value
+
+        };
+
+        fetch(scriptURL, { 
+        method: 'POST', 
+        body: JSON.stringify(data)
+        })
+        .then(response => {
+        alert('RSVP inviato con successo!')
+        btn.classList.remove('loading')
+        btn.disabled = false
+        textSpan.innerText = 'Invia'
+        spinner.style.display = 'none'
+        btn.style.backgroundColor = '#ffffff' })// Ritorna al colore originale
+        .catch(error => 
+        {
+            console.error('Errore!', error.message)
+            btn.classList.remove('loading')
+            btn.disabled = false
+            textSpan.innerText = 'Invia'
+            spinner.style.display = 'none'
+            btn.style.backgroundColor = '#ffffff'// Ritorna al colore originale
+        });
+
+        
+    });
+</script>

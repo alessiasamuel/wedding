@@ -98,7 +98,6 @@ h6 {
 
 /* RSVP Page */
 .rsvp-container {
-    margin-top: 120px;
     background: rgba(200,162,200, 0.5);
     padding: 30px;
     max-width: 600px;
@@ -1053,4 +1052,43 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: #f8d56f;
+}
+
+.my-button {
+  background-color: #007bff; /* Colore base (blu) */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  position: relative;
+  min-width: 100px;
+}
+
+/* 1. Colore al click down (:active) */
+.my-button:active {
+  background-color: #004a99; /* Colore più scuro al click */
+}
+
+/* Stato di caricamento (aggiunto via JS) */
+.my-button.loading {
+  background-color: #6c757d; /* Colore grigio durante l'attesa */
+  cursor: wait;
+}
+
+/* Stile per lo spinner (caricamento) */
+.spinner {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid rgba(255,255,255,.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+  margin-left: 10px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
 }
