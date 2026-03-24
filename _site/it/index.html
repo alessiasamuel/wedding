@@ -93,7 +93,7 @@
     <div class="container">
         <div class="intro-text">
             <div class="intro-heading">Ci sposiamo!</div>
-            <div class="intro-lead-in">18 Luglio 2026 <br> ore 16:00</div>
+            <div class="intro-lead-in">18 Luglio 2026 <br> ore 16:30</div>
             <div class="intro-lead-in">Chiesa di <br>San Pier di Canne</div>
             <a href="#events" class="page-scroll btn btn-xl">Scopri di più</a>
         </div>
@@ -150,11 +150,11 @@
             <div class="col-lg-8 col-lg-offset-2 text-center">
                 <p class="largepad text-muted">
                     Il 18 Luglio 2026 ci sposiamo! <br> 
-                    Siamo molto felici di condividere con voi questo giorno così importante, per noi inizio di una vita insieme. Speriamo davvero che riusciate a esserci! <br> In questo sito troverete tutte le informazioni sul nostro matrimonio. <br><br> Non dimenticatevi di confermare la vostra presenza!
-                    <br>Per qualsiasi cosa, sentiamoci!
-                    <br>Grazie per camminare accanto a noi. Vi vogliamo bene.
-                    <br>Un abbraccio,
-                    <br><b>Alessia & Samuel</b>
+                    Siamo molto felici di condividere con voi questo giorno così importante, per noi inizio di una vita insieme. Speriamo davvero che riusciate a esserci! <br> Non dimenticatevi di confermare la vostra presenza entro il 31 maggio, se possibile. <br><br> In questo sito troverete tutte le informazioni sul nostro matrimonio.
+                    <br>Per qualsiasi cosa, scriveteci!
+                    <br><br>Grazie per camminare accanto a noi. <br>Vi vogliamo bene,
+                    <br><br><b>Alessia & Samuel</b>
+
                 </p>
             </div>
         </div>
@@ -193,11 +193,8 @@
                         <div class="timeline-panel">
                             <div class="timeline-heading">
                                 <h4>Cerimonia</h4>
-                                <h4 class="subheading">Ore 16:00</h4>
+                                <h4 class="subheading">Ore 16:30</h4>
                                 <h6>Chiesa di San Pier di Canne</h6>
-                            </div>
-                            <div class="timeline-body">
-                                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed posuere.</p>
                             </div>
                         </div>
                     </li>
@@ -208,7 +205,7 @@
                         <div class="timeline-panel">
                             <div class="timeline-heading">
                                 <h4>Taglio dell'anguria</h4>
-                                <h4 class="subheading">Ore 17:00</h4>
+                                <h4 class="subheading">Ore 17:30</h4>
                                 <h6>Piazza di San Pier di Canne</h6>
                             </div>
                             <div class="timeline-body">
@@ -223,7 +220,7 @@
                         <div class="timeline-panel">
                             <div class="timeline-heading">
                                 <h4>Aperitivo</h4>
-                                <h4 class="subheading">Ore 18:00</h4>
+                                <h4 class="subheading">Ore 19:00</h4>
                                 <h6>La Novellina</h6>
                             </div>
                             <div class="timeline-body">
@@ -238,7 +235,7 @@
                         <div class="timeline-panel">
                             <div class="timeline-heading">
                                 <h4>Cena</h4>
-                                <h4 class="subheading">Ore 19:00</h4>
+                                <h4 class="subheading">Ore 20:00</h4>
                                 <h6>La Novellina</h6>
                             </div>
                             <div class="timeline-body">
@@ -335,22 +332,32 @@
                     <label>Nome e Cognome</label>
                     <input type="text" name="nome" required>
                 
-                    <label>Parteciperai?</label>
+                    <label>A cosa parteciperai?</label>
                     <select name="presenza" required>
-                        <option value="Si">Sì, sarò presente</option>
-                        <option value="No">No, non posso venire</option>
+                        <option value="Si">Ci sarò il 18 luglio, alla cerimonia + ricevimento</option>
+                        <option value="No">No, purtroppo non posso venire</option>
                     </select>
                 
                     <label>Numero di accompagnatori</label>
                     <input type="number" name="accompagnatori" min="0" value="0">
  
                     <label>Come verrai?</label>
-                    <select name="mezzi" required>
+                    <select id="scelta" name="mezzi" required>
+                        <option value="null">-- Seleziona --</option>
                         <option value="macchina">Sono in macchina</option>
                         <option value="passaggio">Ho bisogno di un passaggio</option>
                     </select>
-                    <label>Se vieni in macchina, hai dei posti liberi?</label>
-                    <input type="number" name="posti_liberi" min="0" value="0">
+
+                    <div id="contenitore_macchina">
+                        <label>Hai dei posti liberi?</label>
+                        <input type="number" name="posti_liberi" min="0" value="0">
+                    </div>
+
+                    <div id="contenitore_passaggio">
+                        <label>Da dove parti?</label>
+                        <textarea name="partenza_passaggio" rows="1"></textarea>
+                    </div>
+                    
                     <label>Hai allergie, intolleranze o esigenze particolari?</label>
                     <textarea name="note" rows="4"></textarea>
                     
@@ -420,6 +427,32 @@
         
     });
 </script>
+
+<script>
+// Riferimenti agli elementi
+const select = document.getElementById('scelta');
+const contenitore_macchina = document.getElementById('contenitore_macchina');
+
+// Listener sul cambio di selezione
+select.addEventListener('change', function () {
+    const valore = this.value;
+
+    if (valore === 'macchina') {
+        // Mostra il div
+        contenitore_macchina.style.display = 'block';
+        
+        // Nasconde il div e svuota il contenuto
+        contenitore_passaggio.style.display = 'none';
+
+    } else {
+        // Nasconde il div e svuota il contenuto
+        contenitore_macchina.style.display = 'none';
+
+         // Mostra il div
+        contenitore_passaggio.style.display = 'block';
+    }
+});
+</script>
     <!DOCTYPE html>
 <html>
     <style>
@@ -469,14 +502,14 @@
             </div>
             <div class="col-lg-8 col-lg-offset-2 text-center">
                 <p class="largepad text-muted">
-                    Ciao amiche, amici e parenti,<br>
-                    siamo davvero contenti se vorrete festeggiare insieme a noi, da vicino o da lontano: per noi è un inizio di una bellissima avventura chiamata famiglia e speriamo davvero di avervi accanto <i class="fas fa-heart"></i><br>
+                    Siamo davvero contenti se vorrete festeggiare insieme a noi, da vicino o da lontano: per noi è un inizio di una bellissima avventura chiamata famiglia e speriamo davvero di avervi accanto <i class="fas fa-heart"></i><br>
                     <br>
+                    Grazie per celebrare con noi questo giorno,
+                    <br> Grazie per camminare insieme in questo viaggio!<br>
                     Se vi fa piacere contribuire ai nostri futuri progetti, questo è il nostro IBAN: 
                     <br><b style="color: black;">Intestatario: Alessia Giordan e Samuel Ghiorzo</b>
                     <br><b style="color: black;">IBAN:</b>
                     <br><br>Qual'è il nostro prossimo progetto? Fare un luuuuungo viaggio in <b>Indonesia</b>, alla scoperta di nuove culture, tradizioni e tante bellezze naturali.
-
                 </p>
             </div>
         </div>

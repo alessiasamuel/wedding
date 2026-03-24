@@ -13,22 +13,32 @@
                     <label>Nome e Cognome</label>
                     <input type="text" name="nome" required>
                 
-                    <label>Parteciperai?</label>
+                    <label>A cosa parteciperai?</label>
                     <select name="presenza" required>
-                        <option value="Si">Sì, sarò presente</option>
-                        <option value="No">No, non posso venire</option>
+                        <option value="Si">Ci sarò il 18 luglio, alla cerimonia + ricevimento</option>
+                        <option value="No">No, purtroppo non posso venire</option>
                     </select>
                 
                     <label>Numero di accompagnatori</label>
                     <input type="number" name="accompagnatori" min="0" value="0">
  
                     <label>Come verrai?</label>
-                    <select name="mezzi" required>
+                    <select id="scelta" name="mezzi" required>
+                        <option value="null">-- Seleziona --</option>
                         <option value="macchina">Sono in macchina</option>
                         <option value="passaggio">Ho bisogno di un passaggio</option>
                     </select>
-                    <label>Se vieni in macchina, hai dei posti liberi?</label>
-                    <input type="number" name="posti_liberi" min="0" value="0">
+
+                    <div id="contenitore_macchina">
+                        <label>Hai dei posti liberi?</label>
+                        <input type="number" name="posti_liberi" min="0" value="0">
+                    </div>
+
+                    <div id="contenitore_passaggio">
+                        <label>Da dove parti?</label>
+                        <textarea name="partenza_passaggio" rows="1"></textarea>
+                    </div>
+                    
                     <label>Hai allergie, intolleranze o esigenze particolari?</label>
                     <textarea name="note" rows="4"></textarea>
                     
@@ -97,4 +107,30 @@
 
         
     });
+</script>
+
+<script>
+// Riferimenti agli elementi
+const select = document.getElementById('scelta');
+const contenitore_macchina = document.getElementById('contenitore_macchina');
+
+// Listener sul cambio di selezione
+select.addEventListener('change', function () {
+    const valore = this.value;
+
+    if (valore === 'macchina') {
+        // Mostra il div
+        contenitore_macchina.style.display = 'block';
+        
+        // Nasconde il div e svuota il contenuto
+        contenitore_passaggio.style.display = 'none';
+
+    } else {
+        // Nasconde il div e svuota il contenuto
+        contenitore_macchina.style.display = 'none';
+
+         // Mostra il div
+        contenitore_passaggio.style.display = 'block';
+    }
+});
 </script>

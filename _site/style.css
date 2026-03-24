@@ -97,6 +97,14 @@ h6 {
 }
 
 /* RSVP Page */
+/* Div nascosto di default */
+#contenitore_macchina {
+    display: none;
+}
+#contenitore_passaggio {
+    display: none;
+}
+
 .rsvp-container {
     background: rgba(200,162,200, 0.5);
     padding: 30px;

@@ -1,196 +1,136 @@
-<!-- Where To Stay Section -->
+<!-- RSVP Section -->
 <section id="stay" class="bg-light-gray">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Where To Stay</h2>
-                <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque feugiat sapien sem, id dignissim est pellentesque eu. Etiam eget ligula fermentum, convallis odio vel, sodales metus. Proin odio arcu, tincidunt.</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <ul style="list-style-type:none;">
-                    <li>
-                        Name
-                        <ul class="fa-ul">
-                            <li>
-                                <span class="fa-li"><i class="fa fa-home"></i></span><span class="text-muted plist">Description</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-map-marker"></i></span><span class="text-muted plist">Address</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-phone"></i></span><span class="text-muted plist">Phone number</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fas fa-external-link-alt"></i></span><span class="plist"><a href="https://www.airbnb.com">https://www.airbnb.com/</a></span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-car"></i></span><span class="text-muted plist">Distance from venue</span>
-                            </li>
-                            <li><br></li>
-                        </ul>
-                    </li>
+            <div class="rsvp-container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading">RSVP</h2>
+                        <h3 class="section-subheading text-muted" style="color:white;"><b>Mark your presence here by May 31th</h3>
+                    </div>
+                </div>
+                <form id="rsvpForm">
+                    <label>Name and Surname</label>
+                    <input type="text" name="nome" required>
+                
+                    <label>Will you be able to attend?</label>
+                    <select name="presenza" required>
+                        <option value="Si">Yes, I will!</option>
+                        <option value="No">No, unfortunately I won't be there</option>
+                    </select>
+                
+                    <label>Number of companions</label>
+                    <input type="number" name="accompagnatori" min="0" value="0">
+ 
+                    <label>How are you going to come??</label>
+                    <select id="scelta" name="mezzi" required>
+                        <option value="null">-- Select --</option>
+                        <option value="macchina">I'm going to come by car</option>
+                        <option value="passaggio">I need a ride</option>
+                    </select>
 
-                    <li>
-                        Name
-                        <ul class="fa-ul">
-                            <li>
-                                <span class="fa-li"><i class="fa fa-home"></i></span><span class="text-muted plist">Description</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-map-marker"></i></span><span class="text-muted plist">Address</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-phone"></i></span><span class="text-muted plist">Phone number</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fas fa-external-link-alt"></i></span><span class="plist"><a href="https://www.airbnb.com">https://www.airbnb.com/</a></span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-car"></i></span><span class="text-muted plist">Distance from venue</span>
-                            </li>
-                            <li><br></li>
-                        </ul>
-                    </li>
+                    <div id="contenitore_macchina">
+                        <label>Do you have any free seats in the car?</label>
+                        <input type="number" name="posti_liberi" min="0" value="0">
+                    </div>
 
-                    <li>
-                        Name
-                        <ul class="fa-ul">
-                            <li>
-                                <span class="fa-li"><i class="fa fa-home"></i></span><span class="text-muted plist">Description</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-map-marker"></i></span><span class="text-muted plist">Address</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-phone"></i></span><span class="text-muted plist">Phone number</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fas fa-external-link-alt"></i></span><span class="plist"><a href="https://www.airbnb.com">https://www.airbnb.com/</a></span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-car"></i></span><span class="text-muted plist">Distance from venue</span>
-                            </li>
-                            <li><br></li>
-                        </ul>
-                    </li>
+                    <div id="contenitore_passaggio">
+                        <label>Where are you leaving from??</label>
+                        <textarea name="partenza_passaggio" rows="1"></textarea>
+                    </div>
+                    
+                    <label>Do you have any allergies, intolerances, or special requirements?</label>
+                    <textarea name="note" rows="4"></textarea>
+                    
+                    <button id="btnCarica" class="my-button" style="background-color: white; color:black; display: flex; justify-self: center" type="submit">
+                        <span class="btn-text">Send RSVP</span>
+                        <span class="spinner" style="display:none;"></span>
+                    
+                    </button>
+                        
+                    
+                </form>
 
-                    <li>
-                        Name
-                        <ul class="fa-ul">
-                            <li>
-                                <span class="fa-li"><i class="fa fa-home"></i></span><span class="text-muted plist">Description</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-map-marker"></i></span><span class="text-muted plist">Address</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-phone"></i></span><span class="text-muted plist">Phone number</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fas fa-external-link-alt"></i></span><span class="plist"><a href="https://www.airbnb.com">https://www.airbnb.com/</a></span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-car"></i></span><span class="text-muted plist">Distance from venue</span>
-                            </li>
-                            <li><br></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+                <div id="rsvpMessage" style="margin-top:20px; font-weight:bold;"></div>
 
-            <div class="col-md-6">
-                <ul style="list-style-type:none;">
-                    <li>
-                        Name
-                        <ul class="fa-ul">
-                            <li>
-                                <span class="fa-li"><i class="fa fa-home"></i></span><span class="text-muted plist">Description</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-map-marker"></i></span><span class="text-muted plist">Address</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-phone"></i></span><span class="text-muted plist">Phone number</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fas fa-external-link-alt"></i></span><span class="plist"><a href="https://www.airbnb.com">https://www.airbnb.com/</a></span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-car"></i></span><span class="text-muted plist">Distance from venue</span>
-                            </li>
-                            <li><br></li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        Name
-                        <ul class="fa-ul">
-                            <li>
-                                <span class="fa-li"><i class="fa fa-home"></i></span><span class="text-muted plist">Description</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-map-marker"></i></span><span class="text-muted plist">Address</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-phone"></i></span><span class="text-muted plist">Phone number</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fas fa-external-link-alt"></i></span><span class="plist"><a href="https://www.airbnb.com">https://www.airbnb.com/</a></span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-car"></i></span><span class="text-muted plist">Distance from venue</span>
-                            </li>
-                            <li><br></li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        Name
-                        <ul class="fa-ul">
-                            <li>
-                                <span class="fa-li"><i class="fa fa-home"></i></span><span class="text-muted plist">Description</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-map-marker"></i></span><span class="text-muted plist">Address</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-phone"></i></span><span class="text-muted plist">Phone number</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fas fa-external-link-alt"></i></span><span class="plist"><a href="https://www.airbnb.com">https://www.airbnb.com/</a></span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-car"></i></span><span class="text-muted plist">Distance from venue</span>
-                            </li>
-                            <li><br></li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        Name
-                        <ul class="fa-ul">
-                            <li>
-                                <span class="fa-li"><i class="fa fa-home"></i></span><span class="text-muted plist">Description</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-map-marker"></i></span><span class="text-muted plist">Address</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-phone"></i></span><span class="text-muted plist">Phone number</span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fas fa-external-link-alt"></i></span><span class="plist"><a href="https://www.airbnb.com">https://www.airbnb.com/</a></span>
-                            </li>
-                            <li>
-                                <span class="fa-li"><i class="fa fa-car"></i></span><span class="text-muted plist">Distance from venue</span>
-                            </li>
-                            <li><br></li>
-                        </ul>
-                    </li>
-                </ul>
             </div>
         </div>
     </div>
 </section>
+
+<script>
+    scriptURL = 'https://script.google.com/macros/s/AKfycbwgMb-_S2UiSajBAF2M6IbfW7C1VMOMGjGH2AoOuJ8r7PBqaqidj7OEIl2T4jokLfEV/exec';
+    const form = document.getElementById('rsvpForm');
+
+    form.addEventListener('submit', e => {
+        const btn = document.getElementById('btnCarica');
+        const textSpan = btn.querySelector('.btn-text');
+        const spinner = btn.querySelector('.spinner');
+
+        // Cambia stato: aggiunge classe loading, disabilita, mostra spinner
+        btn.classList.add('loading');
+        btn.disabled = true;
+        textSpan.innerText = 'Attendi...';
+        spinner.style.display = 'inline-block';
+        
+        e.preventDefault();
+        const data = {
+        nome: form.nome.value,
+        presenza: form.presenza.value,
+        accompagnatori: form.accompagnatori.value,
+        mezzi: form.mezzi.value,
+        posti_liberi: form.posti_liberi.value,
+        note: form.note.value
+
+        };
+
+        fetch(scriptURL, { 
+        method: 'POST', 
+        body: JSON.stringify(data)
+        })
+        .then(response => {
+        alert('RSVP inviato con successo!')
+        btn.classList.remove('loading')
+        btn.disabled = false
+        textSpan.innerText = 'Invia'
+        spinner.style.display = 'none'
+        btn.style.backgroundColor = '#ffffff' })// Ritorna al colore originale
+        .catch(error => 
+        {
+            console.error('Errore!', error.message)
+            btn.classList.remove('loading')
+            btn.disabled = false
+            textSpan.innerText = 'Invia'
+            spinner.style.display = 'none'
+            btn.style.backgroundColor = '#ffffff'// Ritorna al colore originale
+        });
+
+        
+    });
+</script>
+
+<script>
+// Riferimenti agli elementi
+const select = document.getElementById('scelta');
+const contenitore_macchina = document.getElementById('contenitore_macchina');
+
+// Listener sul cambio di selezione
+select.addEventListener('change', function () {
+    const valore = this.value;
+
+    if (valore === 'macchina') {
+        // Mostra il div
+        contenitore_macchina.style.display = 'block';
+        
+        // Nasconde il div e svuota il contenuto
+        contenitore_passaggio.style.display = 'none';
+
+    } else {
+        // Nasconde il div e svuota il contenuto
+        contenitore_macchina.style.display = 'none';
+
+         // Mostra il div
+        contenitore_passaggio.style.display = 'block';
+    }
+});
+</script>
